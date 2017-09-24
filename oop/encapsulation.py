@@ -37,3 +37,43 @@ tk.__email = 'new_tk@mail.com'
 print(tk.email()) # => tk@mail.com
 tk.update_email('new_tk@mail.com')
 print(tk.email()) # => new_tk@mail.com
+
+# ----- Public Instance Method -----
+
+class Person:
+    def __init__(self, first_name, age):
+        self.first_name = first_name
+        self.__age = age
+
+    def show_age(self):
+        return self.__age
+
+tk = Person('TK', 25)
+print(tk.show_age()) # => 25
+
+# ----- Private Instance Method -----
+
+class Person:
+    def __init__(self, first_name, age):
+        self.first_name = first_name
+        self.__age = age
+
+    def __show_age(self):
+        return self.__age
+
+tk = Person('TK', 25)
+# print(tk.__show_age()) # => AttributeError: Person instance has no attribute '__show_age'
+
+class Person:
+    def __init__(self, first_name, age):
+        self.first_name = first_name
+        self.__age = age
+
+    def show_age(self):
+        return self.__get_age()
+
+    def __get_age(self):
+        return self.__age
+
+tk = Person('TK', 25)
+print(tk.show_age()) # => 25
