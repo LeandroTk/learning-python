@@ -2,8 +2,8 @@
 
 class MySubClass(Object):
 	''' A superclasse é a classe que será herdada
-		E a subclasse é a classe que herdará (os métodos e atributos) da superclasse 
-		Nesse caso: A superclasse é a object e a subclasse é MySubClass'''	
+		E a subclasse é a classe que herdará (os métodos e atributos) da superclasse
+		Nesse caso: A superclasse é a object e a subclasse é MySubClass'''
 	pass
 
 # ================================================================================================================
