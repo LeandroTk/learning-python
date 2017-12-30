@@ -15,8 +15,16 @@ relatives_names = [
 
 print(relatives_names[4]) # Kaio
 
+# Adding elements to list
 bookshelf = []
 bookshelf.append("The Effective Engineer")
 bookshelf.append("The 4 Hour Work Week")
 print(bookshelf[0]) # The Effective Engineer
 print(bookshelf[1]) # The 4 Hour Work Week
+
+# Removing elements to list
+bookshelf = []
+bookshelf.append("The Effective Engineer")
+bookshelf.append("The 4 Hour Work Week")
+del(bookshelf[1])
+print(bookshelf)
